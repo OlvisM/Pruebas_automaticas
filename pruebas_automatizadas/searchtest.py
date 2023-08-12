@@ -19,20 +19,20 @@ class SearchTests(unittest.TestCase):
         driver.implicitly_wait(10)
 
     def test_search_tee(self):
-        self.driver.save_screenshot("captures/Portada.png")
+        self.driver.save_screenshot("capturas/Portada.png")
         driver = self.driver
         search_field = driver.find_element(By.NAME, 'q')
         search_field.clear()
 
         search_field.send_keys('tee')
-        self.driver.save_screenshot("captures/buscar_camisa.png")
+        self.driver.save_screenshot("capturas/buscar_camisa.png")
         search_field.submit()
 
     def test_search_salt_shaker(self):
         driver = self.driver
         search_field = driver.find_element(By.NAME, 'q')
         search_field.send_keys('salt shaker')
-        self.driver.save_screenshot("captures/buscar_salero.png")
+        self.driver.save_screenshot("capturas/buscar_salero.png")
         search_field.submit()
 
         products = driver.find_elements(By.XPATH, '//div[@class = "product-info"]/h2[@class="product-name"]/a')                                       

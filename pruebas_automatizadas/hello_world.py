@@ -43,4 +43,4 @@ class HolaMundo(unittest.TestCase):
         self.driver.quit()
 
 if __name__ == "__main__":
-    unittest.main(verbosity=2, testRunner= HTMLTestRunner(output= 'ejemploReport', report_name= 'registro-usuario'))
+    unittest.main(verbosity=2, testRunner= HTMLTestRunner(output= 'ejemploReport', report_name= 'Registros'))

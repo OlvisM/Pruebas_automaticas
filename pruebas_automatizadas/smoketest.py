@@ -13,7 +13,7 @@ smoke_test = TestSuite([assertion_test, search_test])
 
 #Parámetros para generar el reporte
 kwargs = {
-    "output": "reports/smoke-report"
+    "output": "reportes/smoke-report"
 }
 
 runner = HTMLTestRunner(**kwargs) #Pasando los argumentos para la generación del reporte

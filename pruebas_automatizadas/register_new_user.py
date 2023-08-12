@@ -22,15 +22,15 @@ class RegisterNewUser(unittest.TestCase):
         driver = self.driver
 
         driver.find_element('xpath', '//*[@id="header"]/div/div[2]/div/a').click()
-        driver.save_screenshot("captures/desplegable.png")
+        driver.save_screenshot("capturas/desplegable.png")
 
         driver.find_element('xpath', '//*[@id="header-account"]/div/ul/li[6]/a').click()
-        driver.save_screenshot("captures/myaccount.png")
+        driver.save_screenshot("capturas/myaccount.png")
 
         create_account_button = driver.find_element('xpath', '/html/body/div/div[2]/div[2]/div/div/div[2]/form/div/div[1]/div[2]/a')
         self.assertTrue(create_account_button.is_displayed() and create_account_button.is_enabled())
         create_account_button.click()
-        driver.save_screenshot("captures/login.png")
+        driver.save_screenshot("capturas/login.png")
         
         self.assertEqual('Create New Customer Account', driver.title)
 
@@ -55,19 +55,19 @@ class RegisterNewUser(unittest.TestCase):
         and submit_button.is_enabled())
 
         #Enviar datos de prueba a esos campos del formulario
-        first_name.send_keys('Chanel')
+        first_name.send_keys('olvis')
         time.sleep(1)
         middle_name.send_keys('Test')
         time.sleep(1)
-        last_name.send_keys('Paredes')
+        last_name.send_keys('Mejia')
         time.sleep(1)
-        email_address.send_keys('Test@testingmail.com')
+        email_address.send_keys('olvisEnmanuel00@gmail.com')
         time.sleep(1)
         news_letter_subscription.send_keys('Test')
         time.sleep(1)
-        password.send_keys('Test123')
+        password.send_keys('Test3214')
         time.sleep(1)
-        confirm_password.send_keys('Test123')
+        confirm_password.send_keys('Test3214')
         time.sleep(1)
         submit_button.click()
         time.sleep(1)
@@ -77,4 +77,4 @@ class RegisterNewUser(unittest.TestCase):
         self.driver.close()
 
 if __name__ == "__main__":
-    unittest.main(verbosity=2, testRunner= HTMLTestRunner(output= 'reportRegister', report_name= 'registro-usuario'))
+    unittest.main(verbosity=2, testRunner= HTMLTestRunner(output= 'reportRegister', report_name= 'Registros'))
